@@ -1,9 +1,8 @@
 
 .headerDesign{
     height: 10vh;
-    width: 100vw;
     background-color: #f8f1ee;
-    color: #c33029;
+    color: #e34300;
 }
 .right{
     display: flex;

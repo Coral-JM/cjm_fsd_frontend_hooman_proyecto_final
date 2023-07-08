@@ -1,0 +1,48 @@
+
+.hoomanTitleHome{
+    font-family: "Lobster";
+    color: #e34300;
+    font-size: 7em;
+}
+.homePic{
+    height: 26em;
+    margin-top: 2em;
+    margin-bottom: 11em;
+}
+.banner{
+    display: flex;
+    margin-left: -20em;
+    margin-bottom: 7em;
+}
+.titleScroll1{
+    font-family: "Lobster";
+    font-size: 3em;
+    color: #e34300;
+    margin-bottom: 2em;
+
+}
+.cards{
+    margin-bottom: 5em;
+}
+.oneCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoCard{
+    opacity: 0.8;
+    padding: 1em;
+    cursor: pointer;
+}
+.photoCard:hover{
+    transition: 0.3s;
+    opacity: 100%;
+}
+.stamp{
+    height: 5em;
+    width: 5em;
+    position: absolute;
+    z-index: 3;
+    margin-top: 18em;
+    margin-left: 14em;
+}
