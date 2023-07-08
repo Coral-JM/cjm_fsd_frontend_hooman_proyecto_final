@@ -4,35 +4,38 @@
     width: 100vw;
     background-color: #f8f1ee;
     color: #c33029;
-    /* display: flex; */
-}
-.navLinks{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
 }
 .right{
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1em;
-    margin-left: 1em;
+    padding: 1em;
 }
-.left{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -1.8em;
-    margin-right: 1em;
-    font-family: "Poppins-Bold";
-    font-size: 0.9em;
-}
+
 .hoomanLink {
     font-family: "Lobster";
     font-size: 1.5em;
+    cursor: pointer;
 }
 .barRestLink {
     margin-left: 1em;
     font-family: "Poppins-Bold";
     font-size: 0.9em;
     margin-top: 0.5em;
+    cursor: pointer;
+}
+.hoomanLink:hover, .barRestLink:hover, .submitLink:hover{
+    transition: 0.3s;
+    color: black;
+}
+.submitLink{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: "Poppins-Bold";
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-top: -2.85em;
+    margin-right: 1em;
 }
