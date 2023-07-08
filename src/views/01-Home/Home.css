@@ -11,7 +11,7 @@
 }
 .banner{
     display: flex;
-    margin-left: -20em;
+    margin-left: -21em;
     margin-bottom: 7em;
 }
 .titleScroll1{
@@ -45,4 +45,24 @@
     z-index: 3;
     margin-top: 18em;
     margin-left: 14em;
+}
+.subtitleHome{
+    color: #e34300;
+    cursor: pointer;
+}
+.subtitleHome:hover{
+    transition: 0.3s;
+    color: black;
+}
+.line{
+    height: 0.1em;
+    width: 200vw;
+    background-color: #e34300;
+    margin-bottom: 5em;
+    margin-left: -10em;
+}
+.ndTitle{
+    font-family: "Lobster";
+    font-size: 4em;
+    margin-bottom: 2em;
 }

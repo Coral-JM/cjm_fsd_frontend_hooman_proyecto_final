@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+
+
 
 export const Home = () => {
   return (
@@ -29,7 +30,7 @@ export const Home = () => {
               <Card.Body>
                 <Card.Title>Café Berlín</Card.Title>
               </Card.Body>
-              <img src="../../src/img/stamp.png" alt="new" className="stamp" />
+              <img src="../../src/img/stamp.png" alt="new" className="stamp"/>
             </Card>
             </Col>
             <Col className="oneCard">
@@ -57,6 +58,14 @@ export const Home = () => {
             </Card>
             </Col>
           </Row>
+          <div className="subtitleHome" onClick={()=>navigate("/")}>más bares & restaurantes &gt;&gt;</div>
+          <div className="line"></div>
+          <div className="ndTitle">"dogs are my favorite people"</div>
+          <div className="banner">
+          <img src="../../src/img/backgroundCarousel.png" alt="" />
+          <img src="../../src/img/backgroundCarousel.png" alt="" />
+          </div>
+
         </Col>
       </Row>
     </Container>
