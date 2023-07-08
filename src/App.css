@@ -1,6 +1,22 @@
 #root {
-  max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: #f8f1ee;
+}
+@font-face {
+  font-family: "Poppins-Light-Italic";
+  src: url(../src/fonts/Poppins-ExtraLightItalic.ttf);
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../src/fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../src/fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Lobster";
+  src: url(../src/fonts/Lobster-Regular.ttf);
 }
