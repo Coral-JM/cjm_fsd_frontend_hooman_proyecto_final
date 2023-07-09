@@ -22,3 +22,36 @@
   font-family: "Lobster";
   src: url(../src/fonts/Lobster-Regular.ttf);
 }
+
+.button{
+  height: 2.5em;
+  width: 10em;
+  background-color: #e34300;
+  color: white;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  cursor: pointer;
+}
+.button:hover {
+  transition: 0.3s;
+  color: black;
+}
+.inputReg{
+  width: 20em;
+  height: 2.5em;
+  border-radius: 0.5em;
+  border: solid black 0.1em;
+}
+.link{
+  margin-left: 0.5em;
+  color: #e34300;
+  font-weight: bold;
+  cursor: pointer;
+}
+.link:hover{
+  transition: 0.3s;
+  color: black;
+}

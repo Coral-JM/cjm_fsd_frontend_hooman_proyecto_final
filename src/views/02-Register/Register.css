@@ -1,0 +1,43 @@
+
+.titleRegister{
+    font-family: "Lobster";
+    color: #e34300;
+    font-size: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.imageReg{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0.5em;
+    height: 22em;
+}
+.boxRegister{
+    font-family: "Poppins";
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 25em;
+    width: 27em;
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 3em;
+    margin-left: -0.4em;
+    margin-bottom: 25em;
+}
+.userSub{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.regText{
+    margin-top: 0.5em;
+}
+.linkTo{
+    display: flex;
+    margin: 1em;
+}
+
