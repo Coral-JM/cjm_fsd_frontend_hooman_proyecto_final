@@ -1,0 +1,21 @@
+.loginDesign{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 23em;
+    background-color: white;
+    width: 22em;
+    border-radius: 1em;
+    margin-bottom: 20em;
+
+    font-size: 0.9em;
+    font-family: "Poppins";
+}

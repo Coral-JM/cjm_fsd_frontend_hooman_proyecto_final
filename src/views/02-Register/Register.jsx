@@ -24,14 +24,14 @@ export const Register = () => {
     return(
         <Container>
             <Row>
-                <div className="titleRegister">regístrate</div>
+                <div className="title">regístrate</div>
                 <Col className='imageReg'>
                     <img src='../../src/img/doggy01.png'></img>
                 </Col>
                 <Col>
                         <div className="boxRegister">
                             <div className="userSub">
-                                <div className="regText">Nombre de usuario</div>
+                                <div className="text">Nombre de usuario</div>
                                 <input
                                 className={
                                     userError.nameError === ""
@@ -45,7 +45,7 @@ export const Register = () => {
                                 >   
                                 </input>
                                 <div className="errorText">{userError.nameError}</div>
-                                <div className="regText">Email</div>
+                                <div className="text">Email</div>
                                 <input
                                 className={
                                     userError.nameError === ""
@@ -59,7 +59,7 @@ export const Register = () => {
                                 >
                                 </input>
                                 <div className="errorText">{userError.emailError}</div>
-                                <div className="regText">Password</div>
+                                <div className="text">Password</div>
                                 <input
                                 className={
                                     userError.nameError === ""
@@ -76,7 +76,7 @@ export const Register = () => {
                             </div>
                             <div className="button">Registro</div>
                             <div className="linkTo">
-                            <div className="text">¿Ya tienes una cuenta?</div>
+                            <div className="textLink">¿Ya tienes una cuenta?</div>
                             <div className="link" onClick={()=>navigate("/login")}>Login</div>
                             </div>
                         </div>

@@ -1,11 +1,3 @@
-
-.titleRegister{
-    font-family: "Lobster";
-    color: #e34300;
-    font-size: 5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
 .imageReg{
     display: flex;
     justify-content: flex-end;
@@ -27,16 +19,4 @@
     margin-top: 1em;
     margin-left: -0.5em;
     margin-bottom: 25em;
-}
-.userSub{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.regText{
-    margin-top: 0.5em;
-}
-.linkTo{
-    display: flex;
-    margin: 1em;
 }

@@ -23,6 +23,13 @@
   src: url(../src/fonts/Lobster-Regular.ttf);
 }
 
+.title{
+  font-family: "Lobster";
+  color: #e34300;
+  font-size: 5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 .button{
   height: 2.5em;
   width: 10em;
@@ -64,4 +71,17 @@
 .link:hover{
   transition: 0.3s;
   color: black;
+}
+
+.userSub{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text{
+  margin-top: 0.5em;
+}
+.linkTo{
+  display: flex;
+  margin: 1em;
 }
