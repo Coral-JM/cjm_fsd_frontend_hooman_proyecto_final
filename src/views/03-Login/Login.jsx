@@ -19,11 +19,13 @@ export const Login = () => {
           [e.target.name + "Error"]: mensajeError,
         }));
       };
+
+    
     return(
         <Container>
             <Row >
+            <div className="title">login</div>
                 <Col className='loginDesign'>
-                    <div className="title">login</div>
                     <div className="boxLogin">
                         <div className="userSub">
                             <div className="text">Email</div>
@@ -61,6 +63,11 @@ export const Login = () => {
                             <div className="link" onClick={()=>navigate("/register")}>Regístrate</div>
                         </div>
                     </div>
+                </Col>
+                <Col>
+                <div className="imgLogin">
+                    <img src="../../src/img/doggy03.png" alt="" />
+                </div>
                 </Col>
             </Row>
         </Container>

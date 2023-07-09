@@ -13,7 +13,7 @@ export const Header = () => {
                     <div className="barRestLink">Bares & Restaurantes</div>
                 </div>
                 <div className="submitLink">
-                    <div>Login</div>
+                    <div onClick={()=>navigate("/login")}>Login</div>
                 </div>
             </div>
         </div>
