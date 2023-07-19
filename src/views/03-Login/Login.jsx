@@ -3,9 +3,16 @@ import './Login.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { checkError } from '../../services/useful'
+import { useDispatch } from 'react-redux'
+import { loginMe } from '../../Services/apiCalls'
+import { login } from '../userSlice'
 
 export const Login = () => {
     const navigate = useNavigate();
+    const [userData, setUserData] = useState({});
+    const dispatch = useDispatch();
+
+
     const [userError, setUserError] = useState({
         nameError: "",
         emailError: "",
@@ -19,7 +26,30 @@ export const Login = () => {
           [e.target.name + "Error"]: mensajeError,
         }));
       };
-
+    
+    const loginHandler = (e) => {
+      e.preventDefault();
+      loginMe(userData)
+        .then((res) => {
+          dispatch(login(res))
+          console.log(res)
+          setTimeout(()=> {
+            navigate('/')
+          }, 1000)
+        })
+        .catch((error) => {
+          console.log(error);
+          setUserError({
+            credentials: error.response.data.message,
+          });
+        });
+    };
+    const handleInputChange = (e) => {
+        setUserData((prevState) => ({
+          ...prevState,
+          [e.target.name]: e.target.value,
+        }));
+      };
     
     return(
         <Container>
@@ -38,26 +68,30 @@ export const Login = () => {
                                 type="email"
                                 name="email"
                                 placeholder='Escribe un email'
+                                value={userData.email || ''}
+                                onChange={handleInputChange}
                                 onBlur={inputCheck}
                             >
                             </input>
                             <div className="errorText">{userError.emailError}</div>
                             <div className="text">Password</div>
                             <input
-                            className={
-                                userError.nameError === ""
-                                ? "input"
-                                : "input errorInput"
-                            }
-                            type="password"
-                            name="password"
-                            placeholder='Escribe una contraseña'
-                            onBlur={inputCheck}
+                                className={
+                                    userError.nameError === ""
+                                    ? "input"
+                                    : "input errorInput"
+                                }
+                                type="password"
+                                name="password"
+                                placeholder='Escribe una contraseña'
+                                value={userData.password || ''}
+                                onChange={handleInputChange}
+                                onBlur={inputCheck}
                             >
                             </input>
                             <div className="errorText">{userError.passwordError}</div>
                         </div>
-                        <div className="button">Login</div>
+                        <div onClick={loginHandler} className="button">Login</div>
                         <div className="linkTo">
                             <div className="textLink">¿No tienes una cuenta?</div>
                             <div className="link" onClick={()=>navigate("/register")}>Regístrate</div>

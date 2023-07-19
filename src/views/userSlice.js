@@ -14,21 +14,21 @@ export const userSlice = createSlice({
   },
   reducers: {
       login: (state, action) => {
-        const { token, name, userId, role_id } = action.payload;
-        state.credentials.token = token;
-        state.data.name = name;
-        state.data.user_id = userId;
-        state.data.role_id = role_id;
+        let { payload } = action;
+        state.credentials.token = payload.token;
+        state.data.name = payload.data.name;
+        state.data.user_id = payload.data.user_id;
+        state.data.role_id = payload.data.role_id;
       },
-    //   logout: (state) => {
-    //     state.credentials.token = "";
-    //     state.data.name = "";
-    //     state.data.user_id = "";
-    //     state.data.role_id = "";
-    //   },
+      logout: (state) => {
+        state.credentials.token = "";
+        state.data.name = "";
+        state.data.user_id = "";
+        state.data.role_id = "";
+      },
   },
 });
 
-export const userData = (state) => state.user;
+export const userData = (state) => state.user.data;
 export const { login } = userSlice.actions;
 export default userSlice.reducer;
