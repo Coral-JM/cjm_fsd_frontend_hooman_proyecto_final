@@ -3,23 +3,47 @@ import { Container, Row, Col } from 'react-bootstrap'
 import './Register.css'
 import { useNavigate } from 'react-router-dom'
 import { checkError } from '../../services/useful'
+import { registerMe } from '../../Services/apiCalls'
 
 export const Register = () => {
     const navigate = useNavigate();
+
+    const [user, setUser] = useState({
+        name: "",
+        email: "",
+        password: "",
+      });
+
     const [userError, setUserError] = useState({
         nameError: "",
         emailError: "",
         passwordError: "",
       });
+
     const inputCheck = (e) => {
         let mensajeError = checkError(e.target.name, e.target.value);
-    
         setUserError((prevState) => ({
           ...prevState,
           [e.target.name + "Error"]: mensajeError,
         }));
       };
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setUser((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    };
 
+    const regMe = () => {
+      registerMe(user)
+      .then(() => {
+        setTimeout(() => {
+          navigate("/");
+        }, 2500);
+      })
+      .catch((error) => console.log(error));
+    };
 
     return(
         <Container>
@@ -31,7 +55,7 @@ export const Register = () => {
                 <Col>
                         <div className="boxRegister">
                             <div className="userSub">
-                                <div className="text">Nombre de usuario</div>
+                                <div className="text">Nombre de la mascota</div>
                                 <input
                                 className={
                                     userError.nameError === ""
@@ -40,7 +64,8 @@ export const Register = () => {
                                 }
                                 type="name"
                                 name="name"
-                                placeholder='Escribe un nombre de usuario'
+                                placeholder='Escribe el nombre de tu mascota'
+                                onChange={handleInputChange}
                                 onBlur={inputCheck}
                                 >   
                                 </input>
@@ -55,6 +80,7 @@ export const Register = () => {
                                 type="email"
                                 name="email"
                                 placeholder='Escribe un email'
+                                onChange={handleInputChange}
                                 onBlur={inputCheck}
                                 >
                                 </input>
@@ -69,12 +95,13 @@ export const Register = () => {
                                 type="password"
                                 name="password"
                                 placeholder='Escribe una contraseña'
+                                onChange={handleInputChange}
                                 onBlur={inputCheck}
                                 >
                                 </input>
                                 <div className="errorText">{userError.passwordError}</div>
                             </div>
-                            <div className="button">Registro</div>
+                            <div onClick={()=> regMe()} className="button">Registro</div>
                             <div className="linkTo">
                             <div className="textLink">¿Ya tienes una cuenta?</div>
                             <div className="link" onClick={()=>navigate("/login")}>Login</div>
