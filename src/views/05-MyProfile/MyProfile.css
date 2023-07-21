@@ -1,0 +1,21 @@
+.myProfileDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 20em;
+}
+.boxDesign {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 1.5em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputTitle {
+    margin: 0.5em;
+}
+

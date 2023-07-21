@@ -50,7 +50,7 @@
   width: 20em;
   height: 2.5em;
   border-radius: 0.5em;
-  border: solid black 0.1em;
+  border: solid black 0.05em;
 }
 .errorInput {
   color: red;

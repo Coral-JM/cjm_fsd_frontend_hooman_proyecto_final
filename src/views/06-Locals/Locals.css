@@ -1,0 +1,14 @@
+.localsDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.filterPoints {
+    display: flex;
+    justify-content: center;
+
+}
+.text {
+    margin-right: 1em;
+}

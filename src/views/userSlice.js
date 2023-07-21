@@ -7,23 +7,24 @@ export const userSlice = createSlice({
       token: "",
     },
     data: {
+      id: "",
       name: "",
-      user_id: "",
       role_id: "",
+      email: "",
     },
   },
   reducers: {
       login: (state, action) => {
         let { payload } = action;
         state.credentials.token = payload.token;
+        state.data.id = payload.data.id;
         state.data.name = payload.data.name;
-        state.data.user_id = payload.data.user_id;
         state.data.role_id = payload.data.role_id;
+        state.data.email = payload.data.email;
       },
       logout: (state) => {
         state.credentials.token = "";
         state.data.name = "";
-        state.data.user_id = "";
         state.data.role_id = "";
       },
   },
