@@ -24,7 +24,7 @@
     margin-top: 0.5em;
     cursor: pointer;
 }
-.hoomanLink:hover, .barRestLink:hover, .submitLink:hover{
+.hoomanLink:hover, .barRestLink:hoveR {
     transition: 0.3s;
     color: black;
 }
@@ -37,4 +37,17 @@
     cursor: pointer;
     margin-top: -2.85em;
     margin-right: 1em;
+}
+.favoritesLink {
+    margin-right: 0.2em;
+    font-size: 2em;
+    margin-top: -0.35em;
+    cursor: pointer;
+}
+.profileLink {
+    cursor: pointer;
+}
+.favoritesLink:hover, .profileLink:hover{
+    transition: 0.3s;
+    color: black;
 }

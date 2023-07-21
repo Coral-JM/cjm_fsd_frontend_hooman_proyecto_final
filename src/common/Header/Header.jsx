@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Header.css"
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { userData } from '../../views/userSlice'
 
 export const Header = () => {
     const navigate = useNavigate();
+    const datos = useSelector(userData);
+    const role = datos?.role_id;
 
     return (
         <div className="headerDesign">
@@ -13,9 +17,22 @@ export const Header = () => {
                     <div className="barRestLink">Bares & Restaurantes</div>
                 </div>
                 <div className="submitLink">
-                    <div onClick={()=>navigate("/login")}>Login</div>
+
+                    {role === 1 && (
+                        <div onClick={() => navigate("/admin")}>Admin</div>
+                    )}
+                    {role === 2 && (
+                        <>
+                            <div onClick={() => navigate("/favorites")} className='favoritesLink'>♡</div>
+                            <div onClick={() => navigate("/profile")} className='profileLink'>{datos.name}</div>
+                        </>
+                    )}
+                    {(!role || role === 0) && (
+                        <div onClick={() => navigate("/login")}>Login</div>
+                    )}
+                </div>
                 </div>
             </div>
-        </div>
+        // </div>
     )
 }
