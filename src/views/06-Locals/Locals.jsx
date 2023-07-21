@@ -1,24 +1,27 @@
-import React, { useEffect, useState }from "react";
+import React, { useEffect, useState } from "react";
 import "./Locals.css";
 import { Container, Col, Row } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { getLocals} from "../../Services/apiCalls";
-
+import Card from "react-bootstrap/Card";
+import { getLocals } from "../../Services/apiCalls";
 
 export const Locals = () => {
-const [local, setLocal] = useState({});
-useEffect (() => {
-    getLocals()
-    .then((res)=> {
-        console.log(res);
-    })
-})
+  const [locals, setLocals] = useState({});
+
+  useEffect(() => {
+
+      getLocals()
+        .then((res) => {
+          console.log(res.data.data);
+          setLocals(res.data.data);
+        })
+        .catch((error) => console.log(error));
+    }, []);
+
   return (
     <Container>
       <Row>
+      <div className="title">Valencia</div>
         <Col>
-          <div className="title">Valencia</div>
           <div className="localsDesign">
             <input
               className="input"
@@ -33,24 +36,25 @@ useEffect (() => {
               <div className="circle"></div>
               <div className="text">O Veganos</div>
             </div>
-            <div className="locals">
-
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-
-            </div>
-          </div>
+            </div>  
         </Col>
-      </Row>
+    </Row>
+        <Row>
+            <Col className="locals">
+            {locals.map((local) => (
+              <div key={local.id}>
+                <Card className="localCard"style={{border: "transparent" }}>
+                  <Card.Img variant="top" src="" />{local.image}
+                  <Card.Body>
+                    <Card.Title>{local.name}</Card.Title>
+                    <div className="button">Detalles</div>
+                  </Card.Body>
+                </Card>
+              </div>
+            ))}
+            </Col>
+        </Row>
+      
     </Container>
   );
 };
