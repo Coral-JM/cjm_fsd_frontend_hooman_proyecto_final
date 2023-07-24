@@ -1,19 +1,14 @@
-.reviews {
+.companies {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 1.5em;
 }
-.reviewCard {
+.companyCard {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1em;
+    width: 25em;
+    margin: 2em;
     padding: 1.5em;
-}
-.linkToWeb{
-    background-color: #d1baf4;
-    color: white;
-    padding: 0.5em;
-    border-radius: 0.5em;
 }

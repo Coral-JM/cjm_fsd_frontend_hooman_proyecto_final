@@ -55,3 +55,14 @@ export const getProfile = async (token) => {
     // console.log(res)
     return res;
   }
+
+  export const getCompanies = async (token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    let res = await axios.get(`${root}/petitions/companies`, config);
+    // console.log(res)
+    return res;
+  }

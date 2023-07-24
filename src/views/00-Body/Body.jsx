@@ -8,6 +8,8 @@ import { MyProfile } from '../05-MyProfile/MyProfile'
 import { Locals } from '../06-Locals/Locals'
 import { Favorites } from '../07-Favorites/Favorites'
 import { Reviews } from '../08-Reviews/Reviews'
+import { Admin } from '../09-Admin/Admin'
+import { Companies } from '../10-Companies/Companies'
 
 export const Body = () => {
     return (
@@ -22,7 +24,8 @@ export const Body = () => {
             <Route path="/locals" element={<Locals />}/>
             <Route path="/favorites" element={<Favorites />}/>
             <Route path="/reviews" element={<Reviews />}/>
-
+            <Route path="/admin" element={<Admin />}/>
+            <Route path="/companies" element={<Companies />}/>
         </Routes>
         </>
     )

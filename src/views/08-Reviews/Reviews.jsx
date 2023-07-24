@@ -18,7 +18,7 @@ export const Reviews = () => {
         })
         .catch((error) => console.log(error));
     }, [])
-    
+
     return (
         <Container>
             <Row>
@@ -33,6 +33,7 @@ export const Reviews = () => {
                         <Card.Text>
                           {review.description}
                         </Card.Text>
+                        <Card.Link className="linkToWeb" href={review.local.url}>{review.local.url}</Card.Link>
                       </Card.Body>
                     </Card>
                     </div>
