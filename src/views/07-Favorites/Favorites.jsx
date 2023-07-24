@@ -5,9 +5,6 @@ import Card from "react-bootstrap/Card";
 import { getFavorites } from "../../Services/apiCalls";
 import { useSelector } from "react-redux";
 
-
-
-
 export const Favorites = () => {
     const [favorites, setfavorites] = useState([]);
     const token = useSelector((state) => state.user.credentials.token);
