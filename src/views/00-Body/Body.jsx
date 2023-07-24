@@ -10,6 +10,7 @@ import { Favorites } from '../07-Favorites/Favorites'
 import { Reviews } from '../08-Reviews/Reviews'
 import { Admin } from '../09-Admin/Admin'
 import { Companies } from '../10-Companies/Companies'
+import { Form } from '../11-Form/Form'
 
 export const Body = () => {
     return (
@@ -26,6 +27,8 @@ export const Body = () => {
             <Route path="/reviews" element={<Reviews />}/>
             <Route path="/admin" element={<Admin />}/>
             <Route path="/companies" element={<Companies />}/>
+            <Route path="/petitions" element={<Form />}/>
+
         </Routes>
         </>
     )

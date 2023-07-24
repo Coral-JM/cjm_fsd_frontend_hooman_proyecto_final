@@ -66,3 +66,24 @@
     font-size: 4em;
     margin-bottom: 2em;
 }
+.localForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10em;
+}
+.boxLinkTo {
+    background-color: #d1baf4;
+    height: 30em;
+    width: 30em;
+    border-radius: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.linkToForm {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 2em;
+    margin-top: 1em;
+}
