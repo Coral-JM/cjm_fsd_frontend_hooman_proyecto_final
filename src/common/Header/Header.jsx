@@ -24,7 +24,7 @@ export const Header = () => {
                     {role === 2 && (
                         <>
                             <div onClick={() => navigate("/favorites")} className='favoritesLink'>♡</div>
-                            <div onClick={() => navigate("/profile")} className='profileLink'>{datos.name}</div>
+                            <div onClick={() => navigate("/profile")} className='profileLink'>Perfil</div>
                         </>
                     )}
                     {(!role || role === 0) && (

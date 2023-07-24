@@ -17,7 +17,7 @@ export const Profile = () => {
                 <Col>
                 <div className="profileDesign">
                     <div onClick={()=>navigate("/myprofile")}className="boxText">Mi perfil</div>
-                    <div className="boxText">Mis favoritos</div>
+                    <div onClick={()=>navigate("/favorites")}className="boxText">Mis favoritos</div>
                     <div className="boxText">Mis reseñas</div>
                     <div onClick={()=>{dispatch(logout()); navigate("/")}} className="boxText">Log out</div>
                 </div>

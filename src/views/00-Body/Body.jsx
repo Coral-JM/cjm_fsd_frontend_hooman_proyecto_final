@@ -6,6 +6,7 @@ import { Login } from '../03-Login/Login'
 import { Profile } from '../04-Profile/Profile'
 import { MyProfile } from '../05-MyProfile/MyProfile'
 import { Locals } from '../06-Locals/Locals'
+import { Favorites } from '../07-Favorites/Favorites'
 
 export const Body = () => {
     return (
@@ -18,6 +19,8 @@ export const Body = () => {
             <Route path="/profile" element={<Profile />}/>
             <Route path="/myprofile" element={<MyProfile />}/>
             <Route path="/locals" element={<Locals />}/>
+            <Route path="/favorites" element={<Favorites />}/>
+
         </Routes>
         </>
     )

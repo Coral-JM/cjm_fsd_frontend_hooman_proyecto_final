@@ -15,12 +15,33 @@ export const getProfile = async (token) => {
         Authorization: `Bearer ${token}`,
       },
     };
-  
     let res = await axios.get(`${root}/profile/myprofile`, config);
-    console.log(res)
+    // console.log(res)
     return res;
   };
 
   export const getLocals = async () => {
     return await axios.get(`${root}/locals`)
+  }
+
+  export const  updateProf = async (data, token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    let res = await axios.post(`${root}/profile/myprofile`, data, config);
+    console.log(data)
+    return res;
+  };
+
+  export const getFavorites = async (token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    let res = await axios.get(`${root}/favorites`, config);
+    // console.log(res)
+    return res;
   }

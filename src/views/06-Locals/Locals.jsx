@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { getLocals } from "../../Services/apiCalls";
 
 export const Locals = () => {
-  const [locals, setLocals] = useState({});
+  const [locals, setLocals] = useState([]);
 
   useEffect(() => {
 
@@ -47,7 +47,7 @@ export const Locals = () => {
                   <Card.Img variant="top" src="" />{local.image}
                   <Card.Body>
                     <Card.Title>{local.name}</Card.Title>
-                    <div className="button">Detalles</div>
+                    <div className="button">Échale un vistazo</div>
                   </Card.Body>
                 </Card>
               </div>

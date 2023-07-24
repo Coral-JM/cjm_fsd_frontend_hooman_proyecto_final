@@ -1,0 +1,14 @@
+.favorites {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5em;
+    margin-left: 1em;
+}
+.favoriteCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17em;
+    margin: 1em;
+    padding: 1.5em;
+}
