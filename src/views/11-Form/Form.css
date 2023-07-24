@@ -1,0 +1,20 @@
+.formCompany {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20em;
+}
+.boxForm {
+    background-color: white;
+    height: 25em;
+    width: 35em;
+    border-radius: 3em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    margin-top: 1em;
+}

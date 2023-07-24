@@ -66,3 +66,13 @@ export const getProfile = async (token) => {
     // console.log(res)
     return res;
   }
+  export const newCompany = async (form, token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+      let res = await axios.post(`${root}/petitions`, form, config);
+      return res.data;
+    
+  };
