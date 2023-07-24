@@ -30,7 +30,6 @@ export const Formulario = () => {
       const createCompany = () => {
         newCompany(form, token)
           .then((res) => {
-            console.log(res.message);
             setTimeout(() => {
                 navigate("/");
               }, 1500);

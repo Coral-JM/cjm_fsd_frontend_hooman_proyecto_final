@@ -74,5 +74,4 @@ export const getProfile = async (token) => {
     };
       let res = await axios.post(`${root}/petitions`, form, config);
       return res.data;
-    
   };

@@ -4,15 +4,15 @@
     justify-content: center;
     align-items: center;
 }
-.filterPoints {
+.points {
     display: flex;
     justify-content: center;
-
+    margin-top: 1em;
 }
-.text {
-    margin-right: 1em;
+.point {
+    padding: 1em;
+    margin-left: 1em;
 }
-
 .locals {
     display: flex;
     flex-wrap: wrap;
