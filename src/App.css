@@ -46,6 +46,22 @@
   transition: 0.3s;
   color: black;
 }
+.buttonTwo{
+  height: 2.5em;
+  width: 10em;
+  background-color: #d1baf4;
+  color: white;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  cursor: pointer;
+}
+.buttonTwo:hover {
+  transition: 0.3s;
+  color: black;
+}
 .input{
   width: 20em;
   height: 2.5em;

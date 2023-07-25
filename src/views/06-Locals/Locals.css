@@ -27,3 +27,9 @@
     margin: 1em;
     padding: 1.5em;
 }
+.searchingBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

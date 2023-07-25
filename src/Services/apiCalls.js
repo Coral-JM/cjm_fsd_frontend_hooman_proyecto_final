@@ -76,8 +76,10 @@ export const getProfile = async (token) => {
       return res.data;
   };
 
-  export const searchLocals = (searchText) => {
-    return axios.get(`${root}/locals/filter`, {
-      params: { search: searchText },
-    });
+  export const searchLocalsInput = (search) => {
+    return axios.get(`${root}/locals`, {params: { search: search,},});
+  };
+
+  export const searchLocals = (specifications) => {
+    return axios.post(`${root}/locals`, { specifications });
   };
