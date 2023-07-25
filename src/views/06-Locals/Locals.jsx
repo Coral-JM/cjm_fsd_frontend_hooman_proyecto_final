@@ -3,10 +3,12 @@ import "./Locals.css";
 import { Container, Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import { getLocals } from "../../Services/apiCalls";
+import { getLocals, searchLocals } from "../../Services/apiCalls";
 
 export const Locals = () => {
   const [locals, setLocals] = useState([]);
+  const [search, setSearch] = useState("");
+
 
   useEffect(() => {
     getLocals()
@@ -16,6 +18,27 @@ export const Locals = () => {
       })
       .catch((error) => console.log(error));
   }, []);
+
+  const handleSearch = (e) => {
+    const text = e.target.value;
+    setSearch(text);
+  };
+
+  useEffect(() => {
+    if (search) {
+      searchLocals(search)
+        .then((res) => {
+          setLocals(res.data.data);
+        })
+        .catch((error) => console.log(error));
+    } else {
+      getLocals()
+        .then((res) => {
+          setLocals(res.data.data);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [search]);
 
   return (
     <Container>
@@ -27,6 +50,9 @@ export const Locals = () => {
               className="input"
               type={"text"}
               placeholder="Busca un local..."
+              value={search}
+              onChange={handleSearch} 
+
             />
           </div>
           <Form >
