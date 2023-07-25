@@ -67,6 +67,7 @@ export const MyProfile = () => {
   return (
     <Container>
       <Row>
+        <div className="title">{datos.name}</div>
         <Col>
           <div className="myProfileDesign">
             <div className="boxDesign">

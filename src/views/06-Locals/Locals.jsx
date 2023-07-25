@@ -4,12 +4,23 @@ import { Container, Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import { getLocals, searchLocals, searchLocalsInput } from "../../Services/apiCalls";
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { addChoosenLocal } from '../localSlice';
 
 export const Locals = () => {
+  const navigate = useNavigate();
   const [locals, setLocals] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedSpecifications, setSelectedSpecifications] = useState([]);
+  const dispatch = useDispatch();
 
+
+  const handleViewDetail = (local) => {
+    console.log("Adding choosenLocal to Redux:", local);
+    // dispatch(addChoosenLocal(local));
+    navigate(`/detail/${local.id}`);
+  };
   
   useEffect(() => {
     getLocals()
@@ -69,6 +80,8 @@ export const Locals = () => {
   };
 
 
+
+
   return (
     <Container>
       <Row>
@@ -120,7 +133,7 @@ export const Locals = () => {
                 {local.image}
                 <Card.Body>
                   <Card.Title>{local.name}</Card.Title>
-                  <div className="button">Échale un vistazo</div>
+                  <div onClick={() => handleViewDetail(local)} className="button">Échale un vistazo</div>
                 </Card.Body>
               </Card>
             </div>
