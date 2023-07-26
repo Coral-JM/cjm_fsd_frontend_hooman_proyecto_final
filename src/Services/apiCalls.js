@@ -86,3 +86,12 @@ export const getProfile = async (token) => {
   export const getLocalById = async (id) => {
     return await axios.get(`${root}/detail/${id}`)
   }
+
+  export const addFavorite = (localId, token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    return axios.post(`${root}/detail/:id`,{ local_id: localId }, config);
+  };

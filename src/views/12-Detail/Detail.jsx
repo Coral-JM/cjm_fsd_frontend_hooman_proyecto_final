@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./Detail.css";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getLocalById } from "../../Services/apiCalls";
+import { addFavorite } from "../../Services/apiCalls";
+import { useSelector } from "react-redux";
 
 export const Detail = () => {
   const { id } = useParams();
   const [local, setLocal] = useState({});
+  const token = useSelector(state => state.user.credentials.token);
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     getLocalById(id)
@@ -16,6 +21,21 @@ export const Detail = () => {
       })
       .catch((error) => console.log(error));
   }, []);
+
+  const addToFavorites = () => {
+    if (token) {
+        const localId = local.id; 
+        addFavorite(localId, token)
+          .then((res) => {
+            console.log(res.data.message); 
+          })
+          .catch((error) => {console.log(error);});
+        navigate('/favorites');
+    } else {
+        navigate('/login');
+    }
+  };
+
 
   return (
     <Container>
@@ -36,7 +56,7 @@ export const Detail = () => {
                     ))}
                 </div>
               </div>
-              <div className="button">Añadir a favoritos</div>
+              <div onClick={addToFavorites} className="button">Añadir a favoritos</div>
               <div className="img"></div>
               <div className="reviews">
                 <div className="textTitle">Reseñas de algunos usuarios</div>
