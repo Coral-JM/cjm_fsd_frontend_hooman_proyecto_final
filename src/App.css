@@ -30,6 +30,12 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.titleRest{
+  font-family: "Lobster";
+  color: #e34300;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
 .button{
   height: 2.5em;
   width: 10em;
@@ -41,6 +47,7 @@
   align-items: center;
   margin: 1.5em;
   cursor: pointer;
+  font-family: 'Poppins';
 }
 .button:hover {
   transition: 0.3s;
@@ -57,6 +64,7 @@
   align-items: center;
   margin: 1.5em;
   cursor: pointer;
+  font-family: 'Poppins';
 }
 .buttonTwo:hover {
   transition: 0.3s;

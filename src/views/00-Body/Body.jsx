@@ -30,7 +30,6 @@ export const Body = () => {
             <Route path="/companies" element={<Companies />}/>
             <Route path="/petitions" element={<Formulario />}/>
             <Route path="/detail/:id" element={<Detail />}/>
-
         </Routes>
         </>
     )

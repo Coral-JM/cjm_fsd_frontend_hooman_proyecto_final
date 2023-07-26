@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import { getLocals, searchLocals, searchLocalsInput } from "../../Services/apiCalls";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { addChoosenLocal } from '../localSlice';
+
 
 export const Locals = () => {
   const navigate = useNavigate();
@@ -16,11 +16,10 @@ export const Locals = () => {
   const dispatch = useDispatch();
 
 
-  const handleViewDetail = (local) => {
-    console.log("Adding choosenLocal to Redux:", local);
-    // dispatch(addChoosenLocal(local));
+  const selectLocal = (local) => {
     navigate(`/detail/${local.id}`);
   };
+  
   
   useEffect(() => {
     getLocals()
@@ -133,7 +132,10 @@ export const Locals = () => {
                 {local.image}
                 <Card.Body>
                   <Card.Title>{local.name}</Card.Title>
-                  <div onClick={() => handleViewDetail(local)} className="button">Échale un vistazo</div>
+                  <div 
+                  onClick={()=>selectLocal(local)} 
+                  className="button">Échale un vistazo</div>
+
                 </Card.Body>
               </Card>
             </div>

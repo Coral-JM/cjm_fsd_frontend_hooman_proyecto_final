@@ -3,11 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins';
 }
 .points {
     display: flex;
     justify-content: center;
     margin-top: 1em;
+    font-family: 'Poppins';
 }
 .point {
     padding: 1em;
@@ -26,6 +28,7 @@
     width: 17em;
     margin: 1em;
     padding: 1.5em;
+    font-family: 'Poppins';
 }
 .searchingBox {
     display: flex;

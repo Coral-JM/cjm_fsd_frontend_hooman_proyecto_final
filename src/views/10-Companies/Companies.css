@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 1.5em;
+    font-family: 'Poppins';
 }
 .companyCard {
     display: flex;
@@ -11,4 +12,5 @@
     width: 25em;
     margin: 2em;
     padding: 1.5em;
+    font-family: 'Poppins';
 }

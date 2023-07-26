@@ -1,0 +1,79 @@
+.detailDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+.boxDetail {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 25em;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10em;
+    padding-bottom: 3em;
+}
+.img {
+    background-color: grey;
+    height: 15em;
+    width: 20em;
+    border-radius: 1em;
+    margin: 2em;
+
+}
+.textDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: -4em;
+}
+.textLocalDetailSpec {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 0.9em;
+}
+.reviews {
+    background-color: #d1baf4;
+    border-radius: 1em;
+    height: auto;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+}
+.boxReviewUsers {
+    border: solid black 0.01em;
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 0.8em;
+}
+.textTitle {
+    margin-bottom: 1em;
+}
+.textLocalDetailTwo {
+    font-size: 0.9em;
+}
+.boxPostReview {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.inputReview {
+    width: 20em;
+    height: 10em;
+    border-radius: 0.5em;
+    border: solid black 0.1em; 
+}
+.inputReview::placeholder {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em; 
+}

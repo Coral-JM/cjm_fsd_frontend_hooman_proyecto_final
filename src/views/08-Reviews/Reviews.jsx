@@ -23,7 +23,7 @@ export const Reviews = () => {
         <Container>
             <Row>
                 <div className="title">mis reseñas</div>
-                <Col className="reviews">
+                <Col className="review">
                 {reviews.map((review) => (
                 <div key={review.id}>
                     <Card className="reviewCard"style={{border: "transparent" }}>

@@ -83,3 +83,6 @@ export const getProfile = async (token) => {
   export const searchLocals = (specifications) => {
     return axios.post(`${root}/locals`, { specifications });
   };
+  export const getLocalById = async (id) => {
+    return await axios.get(`${root}/detail/${id}`)
+  }

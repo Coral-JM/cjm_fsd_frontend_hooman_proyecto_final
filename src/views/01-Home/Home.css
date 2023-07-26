@@ -69,7 +69,7 @@
 .localForm {
     display: flex;
     justify-content: center;
-    margin-bottom: 10em;
+    margin-bottom: 3em;
 }
 .boxLinkTo {
     background-color: #d1baf4;
@@ -80,6 +80,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -4em;
 }
 .linkToForm {
     color: white;

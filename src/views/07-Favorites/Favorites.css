@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     padding: 1.5em;
     margin-left: 1em;
+    font-family: 'Poppins';
 }
 .favoriteCard {
     display: flex;

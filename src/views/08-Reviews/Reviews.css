@@ -3,13 +3,14 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 1.5em;
+    font-family: 'Poppins';
 }
 .reviewCard {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1em;
-    padding: 1.5em;
+    margin-top: 2em;
+    padding: 1em;
 }
 .linkToWeb{
     background-color: #d1baf4;
