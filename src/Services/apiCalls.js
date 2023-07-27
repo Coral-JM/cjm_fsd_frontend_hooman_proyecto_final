@@ -93,8 +93,9 @@ export const getProfile = async (token) => {
         Authorization: `Bearer ${token}`,
       },
     };
-    return axios.post(`${root}/detail/:id`,{ local_id: localId }, config);
+    return axios.post(`${root}/detail/${localId}`, null, config);
   };
+
 
   export const newReview = async (rev, token) => {
     let config = {

@@ -16,7 +16,7 @@ export const Detail = () => {
     title: "",
     description: "",
   });
-  
+  const localId = local.id;
 
 
   useEffect(() => {
@@ -28,9 +28,12 @@ export const Detail = () => {
       .catch((error) => console.log(error));
   }, []);
 
+
+
+
   const addToFavorites = () => {
     if (token) {
-        const localId = local.id; 
+      const localId = local.id;
         addFavorite(localId, token)
           .then((res) => {
             console.log(res.data.message); 
@@ -41,6 +44,7 @@ export const Detail = () => {
         navigate('/login');
     }
   };
+
   const handleReview = (e) => {
     const { name, value } = e.target;
     setRev((prevRev) => ({
@@ -73,7 +77,10 @@ export const Detail = () => {
         <Col>
           <div className="detailDesign">
             <div className="boxDetail">
-              <div className="img"></div>
+              <div className="imgBox">
+                <img src={local.image} className="imageLocal"></img>
+              </div>
+              
               <div className="textDetails">
                 <div className="textLocalDetail">{local.name}</div>
                 <div className="textLocalDetailTwo">📍{local.direction}</div>
@@ -86,7 +93,6 @@ export const Detail = () => {
                 </div>
               </div>
               <div onClick={addToFavorites} className="button">Añadir a favoritos</div>
-              <div className="img"></div>
               <div className="reviews">
                 <div className="textTitle">Reseñas de algunos usuarios</div>
                 <div>

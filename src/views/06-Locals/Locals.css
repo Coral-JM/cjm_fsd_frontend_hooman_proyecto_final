@@ -30,6 +30,7 @@
     padding: 1.5em;
     font-family: 'Poppins';
 }
+
 .searchingBox {
     display: flex;
     flex-direction: column;

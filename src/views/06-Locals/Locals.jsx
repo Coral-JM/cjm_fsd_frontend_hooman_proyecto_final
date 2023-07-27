@@ -127,15 +127,13 @@ export const Locals = () => {
         <Col className="locals">
           {locals.map((local) => (
             <div key={local.id}>
-              <Card className="localCard" style={{ border: "transparent" }}>
-                <Card.Img variant="top" src="" />
-                {local.image}
+              <Card className="localCard" style={{ border: "transparent", height: "23em"}}>
+                <Card.Img variant="top" src={local.image} />
                 <Card.Body>
                   <Card.Title>{local.name}</Card.Title>
                   <div 
                   onClick={()=>selectLocal(local)} 
                   className="button">Échale un vistazo</div>
-
                 </Card.Body>
               </Card>
             </div>

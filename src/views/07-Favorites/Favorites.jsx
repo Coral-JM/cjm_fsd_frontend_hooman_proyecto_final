@@ -26,7 +26,7 @@ export const Favorites = () => {
                 {favorites.map((favorite) => (
                 <div key={favorite.id}>
                     <Card className="favoriteCard"style={{border: "transparent" }}>
-                      <Card.Img variant="top" src="" />{favorite.local.image}
+                      <Card.Img variant="top" src={favorite.local.image} />
                       <Card.Body>
                         <Card.Title>{favorite.local.name}</Card.Title>
                         <div className="button">Échale un vistazo</div>

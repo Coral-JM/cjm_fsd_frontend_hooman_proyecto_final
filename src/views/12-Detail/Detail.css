@@ -17,13 +17,18 @@
     margin-bottom: 10em;
     padding-bottom: 3em;
 }
-.img {
+.imgBox {
     background-color: grey;
     height: 15em;
     width: 20em;
     border-radius: 1em;
     margin: 2em;
+    overflow: hidden;
 
+}
+.imageLocal {
+    height: 15em;
+    width: 20em;
 }
 .textDetails {
     display: flex;
