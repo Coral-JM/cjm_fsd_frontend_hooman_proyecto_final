@@ -11,14 +11,14 @@ export const Formulario = () => {
   const navigate = useNavigate();
   const datos = useSelector(userData);
   const token = useSelector((state) => state.user.credentials.token);
-    const [form, setForm] = useState({
-        company: '',
-        CIF: '',
-        owner_name: '',
-        owner_surname: '',
-        direction: '',
-        zip_code: '',
-      });
+  const [form, setForm] = useState({
+      company: '',
+      CIF: '',
+      owner_name: '',
+      owner_surname: '',
+      direction: '',
+      zip_code: '',
+    });
     
       const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,7 +29,7 @@ export const Formulario = () => {
       };
       const createCompany = () => {
         newCompany(form, token)
-          .then((res) => {
+          .then(() => {
             setTimeout(() => {
                 navigate("/");
               }, 1500);
