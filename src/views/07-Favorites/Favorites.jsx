@@ -4,10 +4,18 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Card from "react-bootstrap/Card";
 import { getFavorites } from "../../Services/apiCalls";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export const Favorites = () => {
+    const navigate = useNavigate()
     const [favorites, setfavorites] = useState([]);
     const token = useSelector((state) => state.user.credentials.token);
+    const [local, setLocal] = useState({});
+
+    const selectLocal = (local) => {
+        console.log(local.id);
+        navigate(`/detail/${local.id}`);
+      };
 
     useEffect(() => {
         getFavorites(token)
@@ -29,7 +37,7 @@ export const Favorites = () => {
                       <Card.Img variant="top" src={favorite.local.image} />
                       <Card.Body>
                         <Card.Title>{favorite.local.name}</Card.Title>
-                        <div className="button">Échale un vistazo</div>
+                        <div onClick={() => selectLocal(favorite.local)} className="button">Échale un vistazo</div>
                       </Card.Body>
                     </Card>
                     </div>

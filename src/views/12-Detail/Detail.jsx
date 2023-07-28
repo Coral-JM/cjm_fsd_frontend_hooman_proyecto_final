@@ -3,7 +3,6 @@ import "./Detail.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import { getLocalById } from "../../Services/apiCalls";
-import { addFavorite } from "../../Services/apiCalls";
 import { useSelector } from "react-redux";
 import { newReview } from "../../Services/apiCalls";
 
@@ -16,9 +15,9 @@ export const Detail = () => {
     title: "",
     description: "",
   });
-  const localId = local.id;
+  // const localId = local.id;
 
-
+  
   useEffect(() => {
     getLocalById(id)
       .then((res) => {
@@ -27,23 +26,6 @@ export const Detail = () => {
       })
       .catch((error) => console.log(error));
   }, []);
-
-
-
-
-  const addToFavorites = () => {
-    if (token) {
-      const localId = local.id;
-        addFavorite(localId, token)
-          .then((res) => {
-            console.log(res.data.message); 
-          })
-          .catch((error) => {console.log(error);});
-        navigate('/favorites');
-    } else {
-        navigate('/login');
-    }
-  };
 
   const handleReview = (e) => {
     const { name, value } = e.target;
@@ -92,7 +74,6 @@ export const Detail = () => {
                     ))}
                 </div>
               </div>
-              <div onClick={addToFavorites} className="button">Añadir a favoritos</div>
               <div className="reviews">
                 <div className="textTitle">Reseñas de algunos usuarios</div>
                 <div>

@@ -93,7 +93,10 @@ export const getProfile = async (token) => {
         Authorization: `Bearer ${token}`,
       },
     };
-    return axios.post(`${root}/detail/${localId}`, null, config);
+    const data = {
+      local_id: localId,
+    };
+    return axios.post(`${root}/locals/fav`, data, config);
   };
 
 

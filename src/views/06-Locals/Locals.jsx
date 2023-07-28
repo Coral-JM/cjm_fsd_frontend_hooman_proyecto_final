@@ -5,7 +5,8 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import { getLocals, searchLocals, searchLocalsInput } from "../../Services/apiCalls";
 import { useNavigate } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite } from "../../Services/apiCalls";
 
 
 export const Locals = () => {
@@ -14,7 +15,7 @@ export const Locals = () => {
   const [search, setSearch] = useState("");
   const [selectedSpecifications, setSelectedSpecifications] = useState([]);
   const dispatch = useDispatch();
-
+  const token = useSelector(state => state.user.credentials.token);
 
   const selectLocal = (local) => {
     navigate(`/detail/${local.id}`);
@@ -78,9 +79,22 @@ export const Locals = () => {
     }
   };
 
-
-
-
+  const addToFavorites = (local) => {
+    if (token) {
+      const localId = local.id;
+      addFavorite(localId, token)
+        .then((res) => {
+          console.log(res.data.message);
+          navigate('/favorites');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      navigate("/login");
+    }
+  };
+  
   return (
     <Container>
       <Row>
@@ -134,6 +148,12 @@ export const Locals = () => {
                   <div 
                   onClick={()=>selectLocal(local)} 
                   className="button">Échale un vistazo</div>
+
+                  <div 
+                      onClick={() => addToFavorites(local)}
+                      className="button">Añadir a favoritos</div>
+
+
                 </Card.Body>
               </Card>
             </div>
