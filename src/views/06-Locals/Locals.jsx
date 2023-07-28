@@ -141,19 +141,17 @@ export const Locals = () => {
         <Col className="locals">
           {locals.map((local) => (
             <div key={local.id}>
-              <Card className="localCard" style={{ border: "transparent", height: "23em"}}>
-                <Card.Img variant="top" src={local.image} />
+              <Card className="localCard" style={{ background: "transparent", border: "solid 0.01em #e34300", borderRadius: "3em", height: "21em"}}>
+                <Card.Img variant="top" style= {{borderRadius: "1em"}}src={local.image} />
                 <Card.Body>
-                  <Card.Title>{local.name}</Card.Title>
-                  <div 
-                  onClick={()=>selectLocal(local)} 
-                  className="button">Échale un vistazo</div>
-
-                  <div 
-                      onClick={() => addToFavorites(local)}
-                      className="button">Añadir a favoritos</div>
-
-
+                <Card.Text >{local.name}</Card.Text>
+                  <div className="boxButtons">
+                  <div onClick={()=>selectLocal(local)} 
+                    className="buttonCard">Ver</div>
+                  <div onClick={() => addToFavorites(local)}
+                      className="buttonCard">♡</div>
+                  </div>
+                  
                 </Card.Body>
               </Card>
             </div>

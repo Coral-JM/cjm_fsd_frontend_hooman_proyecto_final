@@ -33,9 +33,7 @@ export const Login = () => {
         .then((res) => {
           dispatch(login(res))
           console.log(res)
-          setTimeout(()=> {
             navigate('/')
-          }, 1000)
         })
         .catch((error) => {
           console.log(error);
