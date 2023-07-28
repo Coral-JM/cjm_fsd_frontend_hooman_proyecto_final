@@ -109,3 +109,15 @@ export const getProfile = async (token) => {
       let res = await axios.post(`${root}/detail/${rev.local_id}`, rev, config);
       return res.data;
   };
+
+  export const deleteFavorite = (token, localId) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    const data = {
+      local_id: localId,
+    };
+    return axios.delete(`${root}/favorites`, { ...config, data });
+  };

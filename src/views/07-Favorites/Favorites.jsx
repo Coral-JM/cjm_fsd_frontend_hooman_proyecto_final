@@ -5,12 +5,13 @@ import Card from "react-bootstrap/Card";
 import { getFavorites } from "../../Services/apiCalls";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteFavorite } from "../../Services/apiCalls";
 
 export const Favorites = () => {
     const navigate = useNavigate()
     const [favorites, setfavorites] = useState([]);
     const token = useSelector((state) => state.user.credentials.token);
-    const [local, setLocal] = useState({});
+    
 
     const selectLocal = (local) => {
         console.log(local.id);
@@ -26,6 +27,14 @@ export const Favorites = () => {
         .catch((error) => console.log(error));
     }, [])
 
+    const removeFavorite = (localId) => {
+        deleteFavorite(token, localId)
+            .then(() => {
+                setfavorites(favorites.filter((favorite) => favorite.local.id !== localId));
+            })
+            .catch((error) => console.log(error));
+    };
+
     return (
         <Container>
             <Row>
@@ -33,11 +42,15 @@ export const Favorites = () => {
                 <Col className="favorites">
                 {favorites.map((favorite) => (
                 <div key={favorite.id}>
-                    <Card className="favoriteCard"style={{border: "transparent" }}>
-                      <Card.Img variant="top" src={favorite.local.image} />
+                    <Card className="localCard" style={{ background: "transparent", border: "solid 0.01em #e34300", borderRadius: "3em", height: "21em"}}>
+                      <Card.Img variant="top" style= {{borderRadius: "1em"}} src={favorite.local.image} />
                       <Card.Body>
                         <Card.Title>{favorite.local.name}</Card.Title>
-                        <div onClick={() => selectLocal(favorite.local)} className="button">Échale un vistazo</div>
+                        <div className="boxButtons">
+                            <div onClick={() => selectLocal(favorite.local)} className="buttonCard">Ver</div>
+                            <div onClick={() => removeFavorite(favorite.local.id)} className="buttonCard">Eliminar</div>
+                        </div>
+                        
                       </Card.Body>
                     </Card>
                     </div>

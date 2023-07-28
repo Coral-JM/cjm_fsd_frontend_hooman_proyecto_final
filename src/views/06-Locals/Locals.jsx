@@ -142,7 +142,7 @@ export const Locals = () => {
           {locals.map((local) => (
             <div key={local.id}>
               <Card className="localCard" style={{ background: "transparent", border: "solid 0.01em #e34300", borderRadius: "3em", height: "21em"}}>
-                <Card.Img variant="top" style= {{borderRadius: "1em"}}src={local.image} />
+                <Card.Img variant="top" style= {{borderRadius: "1em"}} src={local.image} />
                 <Card.Body>
                 <Card.Text >{local.name}</Card.Text>
                   <div className="boxButtons">

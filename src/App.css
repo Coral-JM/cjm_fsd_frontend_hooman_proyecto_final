@@ -128,3 +128,9 @@
   display: flex;
   margin: 1em;
 }
+.localCard {
+  width: 20em;
+  margin: 1em;
+  padding: 1.5em;
+  font-family: 'Poppins';
+}
