@@ -34,53 +34,31 @@ export const Home = () => {
             <img src="../../src/img/banner.png" alt="banner de margaritas" />
             <img src="../../src/img/banner.png" alt="banner de margaritas" />
           </div>
-          <div className="titleScroll1">descubre los nuevos locales dog-friendly de Valencia </div>
-          <Row className="cards">
-            <Col className="oneCard">
-            <Card style={{ width: "17rem", border: "transparent", marginBottom: "4em"}}>
-              <Card.Img
-                className="photoCard"
-                src="../../src/img/cafeBerlin.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Café Berlín</Card.Title>
-              </Card.Body>
-              <img src="../../src/img/stamp.png" alt="new" className="stamp"/>
-            </Card>
-            </Col>
-            <Col className="oneCard">
-            <Card style={{ width: "17rem", border: "transparent", marginBottom: "4em" }}>
-              <Card.Img
-                className="photoCard"
-                src="../../src/img/cafeBerlin.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Café Berlín</Card.Title>
-              </Card.Body>
-            <img src="../../src/img/stamp.png" alt="new" className="stamp" />
-            </Card>
-            </Col>
-            <Col className="oneCard">
-            <Card style={{ width: "17rem", border: "transparent", marginBottom: "4em" }}>
-              <Card.Img
-                className="photoCard"
-                src="../../src/img/cafeBerlin.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Café Berlín</Card.Title>
-              </Card.Body>
-            <img src="../../src/img/stamp.png" alt="new" className="stamp" />
-            </Card>
-            </Col>
+          <div className="titleScroll1">"dogs are my favorite people" </div>
+          <Row >
+              <Col>
+                <img className="gifOne" src="//static.showit.co/file/zSDrG2gnQPq44d-wPlp3Kg/124182/ezgif_com-gif-maker_copy_3.gif" />
+                <img className="samoyedoImg" src="../../src/img/samoyedo.jpg"/>
+              </Col>
+              <Col>
+                <img className="textImg" src="../../src/img/text.png"/>
+              </Col>
           </Row>
           <div className="subtitleHome" onClick={()=>navigate("/locals")}>más bares & restaurantes &gt;&gt;</div>
           <div className="line"></div>
-          <div className="ndTitle">"dogs are my favorite people"</div>
-          <div className="banner">
-          <img src="../../src/img/backgroundCarousel.png" alt="" />
-          <img src="../../src/img/backgroundCarousel.png" alt="" />
+          <div className="ndTitle">¿Quieres aparecer en nuestra web?</div>
+          <div className="formHome">
+            <div className="formHomeTwo">
+              <div className="linkToForm">Rellena nuestro formulario</div>
+              <div className="buttonFormHome" onClick={handleForm}>Formulario</div>
+            </div>
+            <div className="bannerTwo">
+              <img src="../../src/img/backgroundCarousel.png" alt="" />
+              <img src="../../src/img/backgroundCarousel.png" alt="" />
+            </div>
           </div>
-          <Row>
+
+          {/* <Row>
           <div className="ndTitle">¿Quieres aparecer en nuestra web?</div>
             <Col className="localForm">
               <div className="boxLinkTo">
@@ -89,7 +67,7 @@ export const Home = () => {
                 onClick={handleForm}>Formulario</div>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Col>
       </Row>
     </Container>

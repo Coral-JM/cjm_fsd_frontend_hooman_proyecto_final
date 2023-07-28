@@ -12,43 +12,36 @@
 .banner{
     display: flex;
     margin-left: -21em;
-    margin-bottom: 7em;
+    margin-bottom: 3em;
 }
+
 .titleScroll1{
     font-family: "Lobster";
     font-size: 3em;
     color: #e34300;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
 }
-.cards{
-    margin-bottom: 5em;
+.gifOne {
+     height: 28em;
+     width: 20em;
+     opacity: 80%;
+     z-index: 0;
 }
-.oneCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.samoyedoImg {
+    height: 15em;
+    opacity: 99%;
+    z-index: 2;
+    margin-left: -15.3em;
 }
-.photoCard{
-    opacity: 0.8;
-    padding: 1em;
-    cursor: pointer;
-}
-.photoCard:hover{
-    transition: 0.3s;
-    opacity: 100%;
-}
-.stamp{
-    height: 5em;
-    width: 5em;
-    position: absolute;
-    z-index: 3;
-    margin-top: 18em;
-    margin-left: 14em;
+.textImg {
+    height: 28em;
+    margin-left: -3em;
 }
 .subtitleHome{
     color: #e34300;
     cursor: pointer;
+    margin-top: 2em;
 }
 .subtitleHome:hover{
     transition: 0.3s;
@@ -64,7 +57,14 @@
 .ndTitle{
     font-family: "Lobster";
     font-size: 4em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+}
+.bannerTwo{
+    display: flex;
+    margin-left: -21em;
+    position: relative;
+    z-index: 0;
+    margin-top: -17em;
 }
 .localForm {
     display: flex;
@@ -82,9 +82,42 @@
     align-items: center;
     margin-top: -4em;
 }
+.formHome {
+    margin-bottom: 7em;
+}
+.formHomeTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 3em;
+}
 .linkToForm {
     color: white;
+    font-family: 'Lobster';
+    font-size: 3em;
+    position: relative;
+    z-index: 1;
+}
+.buttonFormHome {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    color: #e34300;
+    height: 3em;
+    width: 7em;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins';
-    font-size: 2em;
-    margin-top: 1em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+.buttonFormHome:Hover {
+    transition: 0.3em;
+    background-color: #d1baf4;
+    color: #e34300;
 }

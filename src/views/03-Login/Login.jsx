@@ -32,7 +32,7 @@ export const Login = () => {
       loginMe(userData)
         .then((res) => {
           dispatch(login(res))
-          console.log(res)
+          // console.log(res)
             navigate('/')
         })
         .catch((error) => {

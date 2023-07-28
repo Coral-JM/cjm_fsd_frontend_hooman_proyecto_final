@@ -21,7 +21,7 @@ export const Favorites = () => {
     useEffect(() => {
         getFavorites(token)
         .then((res)=> {
-            console.log(res.data.data);
+            // console.log(res.data.data);
             setfavorites(res.data.data);
         })
         .catch((error) => console.log(error));
@@ -45,7 +45,7 @@ export const Favorites = () => {
                     <Card className="localCard" style={{ background: "transparent", border: "solid 0.01em #e34300", borderRadius: "3em", height: "21em"}}>
                       <Card.Img variant="top" style= {{borderRadius: "1em"}} src={favorite.local.image} />
                       <Card.Body>
-                        <Card.Title>{favorite.local.name}</Card.Title>
+                        <Card.Text>{favorite.local.name}</Card.Text>
                         <div className="boxButtons">
                             <div onClick={() => selectLocal(favorite.local)} className="buttonCard">Ver</div>
                             <div onClick={() => removeFavorite(favorite.local.id)} className="buttonCard">Eliminar</div>

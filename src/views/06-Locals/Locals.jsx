@@ -25,7 +25,7 @@ export const Locals = () => {
   useEffect(() => {
     getLocals()
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setLocals(res.data.data);
       })
       .catch((error) => console.log(error));
@@ -84,12 +84,10 @@ export const Locals = () => {
       const localId = local.id;
       addFavorite(localId, token)
         .then((res) => {
-          console.log(res.data.message);
+          // console.log(res.data.message);
           navigate('/favorites');
         })
-        .catch((error) => {
-          console.log(error);
-        });
+        .catch((error) => {console.log(error);});
     } else {
       navigate("/login");
     }
@@ -151,7 +149,6 @@ export const Locals = () => {
                   <div onClick={() => addToFavorites(local)}
                       className="buttonCard">♡</div>
                   </div>
-                  
                 </Card.Body>
               </Card>
             </div>

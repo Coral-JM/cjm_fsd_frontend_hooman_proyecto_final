@@ -68,7 +68,7 @@
 }
 .buttonTwo:hover {
   transition: 0.3s;
-  color: black;
+  color: #e34300;
 }
 .buttonCard{
   height: 2em;

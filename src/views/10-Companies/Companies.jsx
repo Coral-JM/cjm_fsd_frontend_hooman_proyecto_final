@@ -34,7 +34,7 @@ export const Companies = () => {
                         <Card.Text>{company.direction}, {company.zip_code}</Card.Text>
                         <Card.Text>{company.CIF}</Card.Text>
                       </Card.Body>
-                      <div className="button">Aprobar</div>
+                      {/* <div className="button">Aprobar</div> */}
                     </Card>
                     </div>
                 ))}
