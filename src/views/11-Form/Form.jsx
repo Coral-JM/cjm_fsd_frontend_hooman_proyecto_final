@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
-import { newCompany } from '../../services/apiCalls'
+import { newCompany } from '../../apiCalls'
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { useNavigate } from "react-router-dom";

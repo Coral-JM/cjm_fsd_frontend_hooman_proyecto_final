@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Detail.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import { getLocalById } from "../../services/apiCalls";
+import { getLocalById } from "../../apiCalls";
 import { useSelector } from "react-redux";
-import { newReview } from "../../services/apiCalls";
+import { newReview } from "../../apiCalls";
 
 export const Detail = () => {
   const navigate = useNavigate()
