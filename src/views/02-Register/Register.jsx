@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Register.css'
 import { useNavigate } from 'react-router-dom'
-import { checkError } from '../../services/useful'
 import { registerMe } from '../../services/apiCalls'
+import { checkError } from '../../services/useful'
+
+
 
 
 export const Register = () => {
