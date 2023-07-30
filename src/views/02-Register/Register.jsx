@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { checkError } from '../../services/useful'
 import { registerMe } from '../../Services/apiCalls'
 
+
 export const Register = () => {
     const navigate = useNavigate();
 
