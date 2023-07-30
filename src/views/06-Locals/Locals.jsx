@@ -3,10 +3,10 @@ import "./Locals.css";
 import { Container, Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import { getLocals, searchLocals, searchLocalsInput } from "../../Services/apiCalls";
+import { getLocals, searchLocals, searchLocalsInput } from "../../services/apiCalls";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite } from "../../Services/apiCalls";
+import { addFavorite } from "../../services/apiCalls";
 
 
 export const Locals = () => {
