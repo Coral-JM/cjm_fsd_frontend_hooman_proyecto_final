@@ -4,8 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { login } from '../userSlice'
-import { loginMe } from '../../services/apiCalls'
-import { checkError } from '../../services/useful'
+import { loginMe } from '../../apiCalls'
+import { checkError } from '../../useful'
 
 
 export const Login = () => {
