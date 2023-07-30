@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import './Login.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import { checkError } from '../../services/useful'
+import { checkError } from '../services/useful'
 import { useDispatch } from 'react-redux'
-import { loginMe } from '../../services/apiCalls'
+import { loginMe } from '../services/apiCalls'
 import { login } from '../userSlice'
 
 

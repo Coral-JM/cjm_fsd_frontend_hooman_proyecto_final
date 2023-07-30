@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./MyProfile.css";
 import { useNavigate } from "react-router-dom";
-import { getProfile } from "../../Services/apiCalls";
+import { getProfile } from "../../services/apiCalls";
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { checkError } from "../../services/useful";
-import { updateProf } from "../../Services/apiCalls";
+import { updateProf } from "../../services/apiCalls";
 
 export const MyProfile = () => {
   const navigate = useNavigate();
