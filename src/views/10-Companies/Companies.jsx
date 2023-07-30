@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Companies.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useSelector } from "react-redux";
-import { getCompanies } from "../../services/apiCalls";
+import { getCompanies } from "../../apiCalls";
 import Card from "react-bootstrap/Card";
 
 

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import './Favorites.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import Card from "react-bootstrap/Card";
-import { getFavorites } from "../../services/apiCalls";
+import { getFavorites } from "../../apiCalls";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { deleteFavorite } from "../../services/apiCalls";
+import { deleteFavorite } from "../../apiCalls";
 
 export const Favorites = () => {
     const navigate = useNavigate()
