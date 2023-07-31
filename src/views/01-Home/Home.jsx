@@ -24,7 +24,7 @@ export const Home = () => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="topHome">
           <div className="homePic"
             alt="Imagen de un galgo con un pañuelo y gafas"
             ></div>

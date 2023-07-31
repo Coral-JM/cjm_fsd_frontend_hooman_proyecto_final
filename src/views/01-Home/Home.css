@@ -4,14 +4,16 @@
     color: #e34300;
     font-size: 7em;
 }
+.topHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .homePic{
     height: 26em;
     margin-top: 2em;
     margin-bottom: 11em;
     background-image: url(../../img/homeCover.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-repeat: no-repeat;
 }
 .banner{
