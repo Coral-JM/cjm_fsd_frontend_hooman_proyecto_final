@@ -1,5 +1,5 @@
 import axios from 'axios';
-const root = "http://https://hooman-project-seven.vercel.app/api";
+const root = "https://hooman-backend.vercel.app/api";
 
 
 export const registerMe = async (user) => {
