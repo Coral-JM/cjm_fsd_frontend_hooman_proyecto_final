@@ -26,7 +26,7 @@ export const Home = () => {
       <Row>
         <Col>
           <img
-            src="../../src/img/homeCover.png"
+            src="../src/img/homeCover.png"
             alt="Imagen de un galgo con un pañuelo y gafas"
             className="homePic"
           />
