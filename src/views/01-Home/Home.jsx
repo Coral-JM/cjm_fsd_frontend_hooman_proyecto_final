@@ -40,7 +40,7 @@ export const Home = () => {
                 <img className="samoyedoImg" src="https://s3-images-frontend.s3.amazonaws.com/samoyedo.jpg"/>
               </Col>
               <Col>
-                <img className="textImg" src="../../src/img/text.png"/>
+                <img className="textImg" src="https://s3-images-frontend.s3.amazonaws.com/text.png"/>
               </Col>
           </Row>
           <div className="subtitleHome" onClick={()=>navigate("/locals")}>más bares & restaurantes &gt;&gt;</div>
@@ -52,8 +52,8 @@ export const Home = () => {
               <div className="buttonFormHome" onClick={handleForm}>Formulario</div>
             </div>
             <div className="bannerTwo">
-              <img src="../../src/img/backgroundCarousel.png" alt="" />
-              <img src="../../src/img/backgroundCarousel.png" alt="" />
+              <img src="https://s3-images-frontend.s3.amazonaws.com/backgroundCarousel.png" alt="" />
+              <img src="https://s3-images-frontend.s3.amazonaws.com/backgroundCarousel.png" alt="" />
             </div>
           </div>
 

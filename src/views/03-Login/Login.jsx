@@ -99,7 +99,7 @@ export const Login = () => {
                 </Col>
                 <Col>
                 <div className="imgLogin">
-                    <img src="../../src/img/doggy03.png" alt="" />
+                    <img src="https://s3-images-frontend.s3.amazonaws.com/doggy03.png" alt="" />
                 </div>
                 </Col>
             </Row>

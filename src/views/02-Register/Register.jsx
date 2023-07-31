@@ -53,7 +53,7 @@ export const Register = () => {
             <Row>
                 <div className="title">regístrate</div>
                 <Col className='imageReg'>
-                    <img src='../../src/img/doggy01.png'></img>
+                    <img src='https://s3-images-frontend.s3.amazonaws.com/doggy01.png'></img>
                 </Col>
                 <Col>
                         <div className="boxRegister">
