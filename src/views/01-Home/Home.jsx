@@ -24,12 +24,10 @@ export const Home = () => {
   return (
     <Container>
       <Row>
-        <Col>
-            <Col className="topHome">
+        <Col className="topHome">
               <div className="homePic" alt="Imagen de un galgo con un pañuelo y gafas"></div>
               <div className="banner"></div>
               <div className="titleScroll1">"dogs are my favorite people" </div>
-            </Col>
             <Row>
               <Col>
                 <img className="gifOne" src="//static.showit.co/file/zSDrG2gnQPq44d-wPlp3Kg/124182/ezgif_com-gif-maker_copy_3.gif" />
