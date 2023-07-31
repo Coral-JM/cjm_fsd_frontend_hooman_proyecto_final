@@ -9,7 +9,7 @@
     <li><a href="#proyecto">Proyecto</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="#vistas">Vistas</a></li>
-    <li><a href="#Proceso">Proceso</a></li>
+    <li><a href="#proceso">Proceso</a></li>
     <li><a href="#licencia">Licencia</a></li>
     <li><a href="#agradecimientos">Agradecimientos</a></li>
   </ol>
