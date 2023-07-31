@@ -25,10 +25,10 @@ export const Home = () => {
     <Container>
       <Row>
         <Col>
-          <div src="https://s3-images-frontend.s3.amazonaws.com/homeCover.png"
+          <img src="https://s3-images-frontend.s3.amazonaws.com/homeCover.png"
             alt="Imagen de un galgo con un pañuelo y gafas"
-            className="homePic">
-            </div>
+            className="homePic"
+            />
           <div className="banner">
             <img src="https://s3-images-frontend.s3.amazonaws.com/banner.png" alt="banner de margaritas" />
             <img src="https://s3-images-frontend.s3.amazonaws.com/banner.png" alt="banner de margaritas" />
@@ -37,7 +37,7 @@ export const Home = () => {
           <Row >
               <Col>
                 <img className="gifOne" src="//static.showit.co/file/zSDrG2gnQPq44d-wPlp3Kg/124182/ezgif_com-gif-maker_copy_3.gif" />
-                <img className="samoyedoImg" src="../../src/img/samoyedo.jpg"/>
+                <img className="samoyedoImg" src="https://s3-images-frontend.s3.amazonaws.com/samoyedo.jpg"/>
               </Col>
               <Col>
                 <img className="textImg" src="../../src/img/text.png"/>
