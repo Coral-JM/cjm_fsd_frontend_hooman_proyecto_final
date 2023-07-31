@@ -9,6 +9,7 @@
     margin-top: 2em;
     margin-bottom: 11em;
     background-image: url(../../img/homeCover.png);
+    background-repeat: no-repeat;
 }
 .banner{
     display: flex;
