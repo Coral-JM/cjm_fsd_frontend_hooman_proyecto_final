@@ -9,7 +9,7 @@
     <li><a href="#proyecto">Proyecto</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="#vistas">Vistas</a></li>
-    <li><a href="#Proceso">Proceso</a></li>
+    <li><a href="#proceso">Proceso</a></li>
     <li><a href="#licencia">Licencia</a></li>
     <li><a href="#agradecimientos">Agradecimientos</a></li>
   </ol>
@@ -20,6 +20,8 @@
 Es una evidencia que cada vez son más las familias multiespecie, hay cada vez más conciencia de lo que supone la decisión de convivir con un animal y la adaptación que debemos hacer de nuestras vidas para que éstos animales no vivan bajo el estrés que la vida humana muchas veces les impone. 
 Hooman será una herramienta más para que éstas familias tengan la posibilidad de convivir también con las mismas oportunidades y encuentren sitios en los que se les permita estar sin ningúna excepción. Cada vez existen más espacios adaptados a la convivencia animal, pero es difícil encontrarlos y de hacerlo, no siempre es justo lo que te apetece. La aplicación pretende facilitar éste trámite y dar opciones.
 Este es el último proyecto realizado para el Bootcamp de Full Stack Developer en GeeksHubs Academy. 
+
+Échale un vistazo a mi backend que le he dado mucho amor perruno: [HOOMAN](https://github.com/Coral-JM/cjm_fsd_backend_hooman_proyecto_final)
 
 ---
 #### Stack 
