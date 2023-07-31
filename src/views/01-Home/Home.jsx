@@ -25,10 +25,10 @@ export const Home = () => {
     <Container>
       <Row>
         <Col>
-          <div src="//s3-images-frontend.s3.amazonaws.com/homeCover.png"
+          <div src="https://s3-images-frontend.s3.amazonaws.com/homeCover.png"
             alt="Imagen de un galgo con un pañuelo y gafas"
             className="homePic">
-              
+
             </div>
           <div className="banner">
             <img src="../../src/img/banner.png" alt="banner de margaritas" />
