@@ -24,16 +24,13 @@ export const Home = () => {
   return (
     <Container>
       <Row>
-        <Col className="topHome">
-          <div className="homePic"
-            alt="Imagen de un galgo con un pañuelo y gafas"
-            ></div>
-          <div className="banner">
-            <img src="../../src/img/banner.png" alt="banner de margaritas" />
-            <img src="../../src/img/banner.png" alt="banner de margaritas" />
-          </div>
-          <div className="titleScroll1">"dogs are my favorite people" </div>
-          <Row >
+        <Col>
+            <Col className="topHome">
+              <div className="homePic" alt="Imagen de un galgo con un pañuelo y gafas"></div>
+              <div className="banner"></div>
+              <div className="titleScroll1">"dogs are my favorite people" </div>
+            </Col>
+            <Row>
               <Col>
                 <img className="gifOne" src="//static.showit.co/file/zSDrG2gnQPq44d-wPlp3Kg/124182/ezgif_com-gif-maker_copy_3.gif" />
                 <img className="samoyedoImg" src="../../src/img/samoyedo.jpg"/>
@@ -41,15 +38,15 @@ export const Home = () => {
               <Col>
                 <img className="textImg" src="../../src/img/text.png"/>
               </Col>
-          </Row>
-          <div className="subtitleHome" onClick={()=>navigate("/locals")}>más bares & restaurantes &gt;&gt;</div>
-          <div className="line"></div>
-          <div className="ndTitle">¿Quieres aparecer en nuestra web?</div>
-          <div className="formHome">
-            <div className="formHomeTwo">
-              <div className="linkToForm">Rellena nuestro formulario</div>
-              <div className="buttonFormHome" onClick={handleForm}>Formulario</div>
-            </div>
+            </Row>
+            <div className="subtitleHome" onClick={()=>navigate("/locals")}>más bares & restaurantes &gt;&gt;</div>
+            <div className="line"></div>
+            <div className="ndTitle">¿Quieres aparecer en nuestra web?</div>
+            <div className="formHome">
+              <div className="formHomeTwo">
+                <div className="linkToForm">Rellena nuestro formulario</div>
+                <div className="buttonFormHome" onClick={handleForm}>Formulario</div>
+              </div>
             <div className="bannerTwo">
               <img src="../../src/img/backgroundCarousel.png" alt="" />
               <img src="../../src/img/backgroundCarousel.png" alt="" />
