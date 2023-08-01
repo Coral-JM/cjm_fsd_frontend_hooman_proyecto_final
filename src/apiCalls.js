@@ -134,3 +134,11 @@ export const getProfile = async (token) => {
     let res = await axios.post(`${root}/newlocal`, formData, config);
     return res.data;
   } 
+  export const getMyCompany = (token) => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    return axios.get(`${root}/profile/company`, config);
+  };
