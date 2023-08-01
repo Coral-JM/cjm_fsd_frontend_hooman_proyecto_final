@@ -31,7 +31,7 @@ export const PendingLocals = () => {
                   background: "transparent",
                   border: "solid 0.01em #e34300",
                   borderRadius: "3em",
-                  height: "25em",
+                  height: "27em",
                 }}
               >
                 <Card.Img
