@@ -142,3 +142,13 @@ export const getProfile = async (token) => {
     };
     return axios.get(`${root}/profile/company`, config);
   };
+  export const getLocalsByAdmin = async (token) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    let res = await axios.get(`${root}/petitions/locals`, config);
+    // console.log(res)
+    return res;
+  }
