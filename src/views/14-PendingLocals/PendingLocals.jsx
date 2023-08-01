@@ -41,14 +41,10 @@ export const PendingLocals = () => {
                 />
                 <Card.Body>
                   <Card.Text>{local.name}</Card.Text>
-                  <div className="boxButtons">
-                    <div
-                    //   onClick={() => selectLocal(local)}
-                      className="buttonCard"
-                    >
-                      Ver
-                    </div>
-                  </div>
+                  <Card.Text>{local.direction}</Card.Text>
+                  <Card.Text>{local.url}</Card.Text>
+                  <Card.Text>{local.phone}</Card.Text>
+                  <Card.Text>{local.type}</Card.Text>
                 </Card.Body>
               </Card>
             </div>
