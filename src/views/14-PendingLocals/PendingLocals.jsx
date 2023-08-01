@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PendingLocals.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getLocalsByAdmin } from "../../apiCalls";
 import { useSelector } from "react-redux";
