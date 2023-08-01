@@ -52,7 +52,7 @@ Este es el último proyecto realizado para el Bootcamp de Full Stack Developer e
 #### Vistas
 Si quieres echarle un ojo al proyecto en un vídeo haz click aquí: [YouTube](https://youtu.be/c65sPYwc4K4)
 
-!['img'](./src/img/Resumen.jpg)
+!['img'](./src/img/ResumenDos.jpg)
 
 ---
 
