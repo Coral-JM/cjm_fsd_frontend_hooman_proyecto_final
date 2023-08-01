@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10em;
     margin-bottom: 20em;
     font-family: 'Poppins';
 }
@@ -21,4 +20,19 @@
 .boxText:hover {
     background-color: #d1baf4;
     color: #e34300;
+}
+.boxTextInfo {
+    background-color: #d1baf4;
+    color: white;
+    width: 20em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+.boxInfoUser {
+    margin-bottom: 2em;
 }

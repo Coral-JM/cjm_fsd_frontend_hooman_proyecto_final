@@ -19,6 +19,7 @@ export const NewLocal = () => {
         'schedule': '',
         'type': '',
         'image': '',
+        'isActive': false
     });
 
     const handleChange = (e) => {

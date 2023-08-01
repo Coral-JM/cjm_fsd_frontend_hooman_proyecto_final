@@ -23,7 +23,8 @@ export const getProfile = async (token) => {
   };
 
   export const getLocals = async () => {
-    return await axios.get(`${root}/locals`)
+
+    return await axios.get(`${root}/locals/active`)
   }
 
   export const  updateProf = async (data, token) => {
@@ -79,11 +80,11 @@ export const getProfile = async (token) => {
   };
 
   export const searchLocalsInput = (search) => {
-    return axios.get(`${root}/locals`, {params: { search: search,},});
+    return axios.get(`${root}/locals/filter`, {params: { search: search,},});
   };
 
   export const searchLocals = (specifications) => {
-    return axios.post(`${root}/locals`, { specifications });
+    return axios.post(`${root}/locals/spec`, { specifications });
   };
   export const getLocalById = async (id) => {
     return await axios.get(`${root}/detail/${id}`)
