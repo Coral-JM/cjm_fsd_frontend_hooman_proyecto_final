@@ -13,7 +13,7 @@ export const Reviews = () => {
     useEffect(() => {
         getReviews(token)
         .then((res)=> {
-            console.log(res.data.data);
+            // console.log(res.data.data);
             setReviews(res.data.data);
         })
         .catch((error) => console.log(error));

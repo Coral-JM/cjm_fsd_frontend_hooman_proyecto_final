@@ -21,7 +21,7 @@ export const Detail = () => {
   useEffect(() => {
     getLocalById(id)
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setLocal(res.data.data);
       })
       .catch((error) => console.log(error));

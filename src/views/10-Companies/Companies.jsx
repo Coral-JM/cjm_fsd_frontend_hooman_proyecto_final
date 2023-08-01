@@ -13,7 +13,7 @@ export const Companies = () => {
     useEffect(() => {
         getCompanies(token)
         .then((res)=> {
-            console.log(res.data.data);
+            // console.log(res.data.data);
             setCompanies(res.data.data);
         })
         .catch((error) => console.log(error));
