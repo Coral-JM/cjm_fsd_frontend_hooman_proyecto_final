@@ -51,6 +51,7 @@ Este es el último proyecto realizado para el Bootcamp de Full Stack Developer e
 
 #### Vistas
 Si quieres echarle un ojo al proyecto en un vídeo haz click aquí: [YouTube](https://youtu.be/c65sPYwc4K4)
+
 !['img'](./src/img/Resumen.jpg)
 
 ---
@@ -63,7 +64,6 @@ Para este proyecto contábamos con dos semanas para realizar la base de datos, l
 #### Licencia
 
 Este proyecto ha sido realizado por Coral Jiménez, estudiante de GeeksHubs Academy en la promoción de primavera del 2023 y cuenta con una MIT License.
-
 ---
 #### Agradecimientos
 
