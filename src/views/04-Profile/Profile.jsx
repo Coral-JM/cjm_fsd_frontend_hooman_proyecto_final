@@ -17,7 +17,7 @@ export const Profile = () => {
         if (user) {
           getProfile(token)
             .then((res) => {
-              console.log(res.data.data);
+              // console.log(res.data.data);
                 setUser(res.data.data)
             })
             .catch((error) => {
@@ -25,14 +25,14 @@ export const Profile = () => {
             });
 
             getMyCompany(token)
-        .then((res) => {
-          setHasCompany(res.data.data.length > 0);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-      }
-    }, []);
+            .then((res) => {
+            setHasCompany(res.data.data.length > 0);
+            })
+            .catch((error) => {
+            console.log(error);
+          });
+        }
+      }, []);
     
 
     return (

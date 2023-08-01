@@ -13,6 +13,7 @@ import { Companies } from '../10-Companies/Companies'
 import { Formulario } from '../11-Form/Form'
 import { Detail } from '../12-Detail/Detail'
 import { NewLocal } from '../13-NewLocal/NewLocal'
+import { PendingLocals } from '../14-PendingLocals/PendingLocals'
 
 export const Body = () => {
     return (
@@ -32,7 +33,7 @@ export const Body = () => {
             <Route path="/petitions" element={<Formulario />}/>
             <Route path="/detail/:id" element={<Detail />}/>
             <Route path="/newlocal" element={<NewLocal />}/>
-
+            <Route path="/pending" element={<PendingLocals />}/>
         </Routes>
         </>
     )

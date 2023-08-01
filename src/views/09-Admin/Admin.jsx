@@ -14,10 +14,12 @@ export const Admin = () => {
     return (
         <Container>
             <Row>
+                <div className="title">Admin</div>
                 <Col>
                 <div className="profileDesign">
                     <div onClick={()=>navigate("/myprofile")}className="boxText">Mi perfil</div>
-                    <div onClick={()=>navigate("/companies")}className="boxText">Solicitudes</div>
+                    <div onClick={()=>navigate("/companies")}className="boxText">Empresas</div>
+                    <div onClick={()=>navigate("/pending")}className="boxText">Locales pendientes</div>
                     <div onClick={()=>{dispatch(logout()); navigate("/")}} className="boxText">Log out</div>
                 </div>
                 </Col>
