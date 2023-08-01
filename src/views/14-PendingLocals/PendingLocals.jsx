@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./PendingLocals.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -41,7 +41,7 @@ export const PendingLocals = () => {
                   <Card.Text>{local.name}</Card.Text>
                   <div className="boxButtons">
                     <div
-                      onClick={() => selectLocal(local)}
+                    //   onClick={() => selectLocal(local)}
                       className="buttonCard"
                     >
                       Ver
