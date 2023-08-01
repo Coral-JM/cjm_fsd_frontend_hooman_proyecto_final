@@ -3,10 +3,12 @@ import "./PendingLocals.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getLocalsByAdmin } from "../../apiCalls";
+import { useSelector } from "react-redux";
 
 export const PendingLocals = () => {
     const navigate = useNavigate();
     const [locals, setLocals] = useState([]);
+    const token = useSelector(state => state.user.credentials.token);
 
     useEffect(() => {
         getLocalsByAdmin(token)
