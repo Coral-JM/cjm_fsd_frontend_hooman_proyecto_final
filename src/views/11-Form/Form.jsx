@@ -31,7 +31,7 @@ export const Formulario = () => {
         newCompany(form, token)
           .then(() => {
             setTimeout(() => {
-                navigate("/");
+                navigate("/newlocal");
               }, 1500);
           })
           .catch((error) => {console.error(error);

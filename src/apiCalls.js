@@ -1,5 +1,6 @@
 import axios from 'axios';
-const root = "https://hooman-backend.vercel.app/api/api";
+// const root = "https://hooman-backend.vercel.app/api/api";
+const root = 'http://localhost:8000/api'
 
 
 export const registerMe = async (user) => {
@@ -122,3 +123,13 @@ export const getProfile = async (token) => {
     };
     return axios.delete(`${root}/favorites`, { ...config, data });
   };
+
+  export const newLocal = async  (token, formData) => {
+    let config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    let res = await axios.post(`${root}/newlocal`, formData, config);
+    return res.data;
+  } 

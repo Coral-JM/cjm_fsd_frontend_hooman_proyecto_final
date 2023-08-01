@@ -1,0 +1,25 @@
+.newLocalDesign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7em;
+    font-family: 'Poppins';
+}
+.newLocalForm {
+    background-color: white;
+    height: auto;
+    width: 35em;
+    border-radius: 3em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.alertBox {
+    border: 0.01em solid black;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 0.8em;
+    margin: 1em;
+}
